@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="img/hearticonico.png">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <link rel="stylesheet" href="build/css/vendor.css">
@@ -8,33 +9,38 @@
 
     <title>Find a PDX Doctor</title>
     <body background="img/doctorBG.png">
+
   </head>
+  <div class="container">
+
   <body>
-    <h1>Test</h1>
-    <hr noshade>
     <br>
-    <form id="illnessSearch">
-      <div class="form-group">
-        <label for="illnessSearch">What symptom are you currently expiriencing?:</label>
-        <br>
-        <input type="text" name="illnessSearch" placeholder="Write your symptom here" required>
-      </div>
-      <button type="submit" class="btn btn-success">FIND DOCTOR</button>
-    </form>
-    <hr noshade>
+    <div class="jumbotron">
+  <h1 class="display-3"><img src="img/hearticon.png"><strong> Search Portland Doctors</strong></h1>
+</div>
     <br>
 
-    <form id="doctorSearch">
-      <div class="form-group">
-        <label for="doctorSearch">Find a Doctor in Portland by name:</label>
-        <br>
-        <input type="text" name="doctorSearch" placeholder="Write a doctor's name here" required>
+    <div class="panel panel-info">
+      <div class="panel-heading"><label for="illnessSearch">What symptom are you currently experiencing?:</label></div>
+      <div class="panel-body"><div class="form-group"><form id="illnessSearch"><input type="text" name="illnessSearch" placeholder="Write your symptom here" required>
       </div>
-      <button type="submit" class="btn btn-success">FIND PDX DOCTOR</button>
-    </form>
-    <div class="container">
+      <div class="panel-footer"><button type="submit" class="btn btn-info">FIND DOCTOR</button> <img src="img/icon1.png"></div>
+</form></div>
+</div>
+<hr noshade>
+<br>
+<div class="panel panel-info">
+  <div class="panel-heading"><label for="doctorSearch">Find a Doctor in Portland by name:</label></div>
+  <div class="panel-body"><div class="form-group"><form id="doctorSearch"><input type="text" name="doctorSearch" placeholder="Write a doctor's name here" required>
+  </div>
+  <div class="panel-footer"><button type="submit" class="btn btn-info">FIND DOCTOR</button> <img src="img/icon2.png"></div>
+</form></div>
+</div>
+    <br>
+    <div class="well">
       <h2>Doctors in your area:</h2>
       <div id="result1"></div>
     </div>
+  </div>
   </body>
 </html>
