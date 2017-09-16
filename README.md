@@ -1,7 +1,7 @@
 
 # Doctor Search
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
-![Alt text](/ptownbanner.png)
+![Alt text](img/ptownbanner.png)
 
 #### Doctor Search, September 15, 2017
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
@@ -28,7 +28,7 @@ You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 *
 * ->▲ open up index.html in your preferred browser & have at it dude!
 
-![Alt text](/ptownwebbie.png)
+![Alt text](img/ptownwebbie.png)
 
 ## Specifications
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
