@@ -1,8 +1,4 @@
-NOTE FOR MY BUILD INSTALL BABELIFY BEFORE RUNNING JSBROWSERIFY
---
-sometimes things don't run right on windows in gitbash - have node.js command prompt handy.
---> bower init doesn't work
---> karma init doesn't work
+
 # Doctor Search
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 ![Alt text](/ptownbanner.png)
@@ -45,6 +41,15 @@ You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 | ------------- | ------------- | ------------- |
 |User search has no returns | "helloworld"| Nothing is returned|
 | ------------- | ------------- | ------------- |
+
+## Notes **
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+`When building the files for this project from the ground up on Windows, -> make sure to install babelify before running jsBrowserify.
+
+As well, sometimes things don't run right on windows in gitbash - have node.js command prompt handy, and make sure both are run in adminstrator mode.
+--> bower init doesn't work in gitbash properly, load in node.js.
+--> karma init doesn't work in gitbash properly, load in node.js.`
+
 ## Technologies Used
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
