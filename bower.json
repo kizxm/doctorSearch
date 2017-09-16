@@ -1,7 +1,7 @@
 {
   "name": "drsearch",
   "description": "doctor search application",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "authors": [
     "kira"
   ],
