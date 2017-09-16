@@ -24,11 +24,10 @@ apiData: function(doctor, showDoctor) {
 },
 
 docByIllness: function(sickness, showDoctor) {
-  let getDoctorApi = fetch(`https://api.betterdoctor.com/2016-03-01/doctors?location=or-portland&user_key=${apiKey}&limit=2&query=${query}`)
+  let getDoctorApi = fetch(`https://api.betterdoctor.com/2016-03-01/doctors?location=or-portland&user_key=${apiKey}&limit=2&query=${sickness}`)
   .then((res) => {
     res.json().then((doctor) => {
       doctorLogic.apiData(doctor, showDoctor);
-    });
   });
 })
 .catch((error) => {
@@ -41,11 +40,11 @@ docByName: function(name, showDoctor) {
   .then((res) => {
     res.json().then((doctor) => {
       console.log(doctor);
-      doctor.apiData(doctor, showDoctor);
+      doctorLogic.apiData(doctor, showDoctor);
     });
-  })
+})
   .catch((error) => {
     console.log(error);
   });
 }
-  };
+};
