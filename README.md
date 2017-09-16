@@ -5,6 +5,7 @@ sometimes things don't run right on windows in gitbash - have node.js command pr
 --> karma init doesn't work
 # Doctor Search
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+![Alt text](/ptownbanner.png)
 
 #### Doctor Search, September 15, 2017
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
@@ -15,38 +16,37 @@ sometimes things don't run right on windows in gitbash - have node.js command pr
 ## Description
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
-_As a Portland local  ._
+_As a Portland local you most likely are in need of a doctor for your various needs. Use this handy app to search a local PDX doctor API to get the doctor best suiting your needs. Or by name ~~ say you're feeling a little more personal about it. Stay healthy ▲ ._
 
 ## Setup/Installation Requirements
-✦☾✦✦✦✦✦✦✦✦✦✦
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
 You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 
-* ->✦ Clone the repo from git hub.
-* ->☾ Open in your favorite editor
-* ->✦ Run with -> npm build
-               -> gulp build
-               -> gulp bower
-* ->☾ open up index.html in your preferred browser & have at it dude!
+* ->▲ Clone the repo from git hub.
+* ->▲ Open in your favorite editor
+* ->▲ !!! VERY IMPORTANT !!! MAKE SURE YOU READ BELOW !!!
+* ->▲ Run with -> npm build
+*               -> gulp build
+*               -> gulp bower
+*
+* ->▲ open up index.html in your preferred browser & have at it dude!
+
+![Alt text](/ptownwebbie.png)
 
 ## Specifications
-✦☾✦✦✦✦✦✦✦✦✦✦
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
-| ✦ Behavior      | ☾ Example Input      | ✦ Example Output       |
+| ▲ Behavior      | ▲ Example Input      | ▲ Example Output       |
 | ------------- | ------------- | ------------- |
-|Birthday returned in seconds | 10-29-1994 | "722251600" answer is fluctuant on exact time.|
+|Enter in Medical Condition | "Cancer"| Doctors matching this criteria are populated below.|
 | ------------- | ------------- | ------------- |
-|Age returned for Planets | Birthday: 10-29-1994| Mercury Age: 12.18|
+|Enter in Name of Physician| "Harold" | All Doctors named "Harold" or with similar parameters are returned.|
 | ------------- | ------------- | ------------- |
-|Age returned for Planets | Birthday: 10-29-1994| Venus Age: 95.43|
+|User search has no returns | "helloworld"| Nothing is returned|
 | ------------- | ------------- | ------------- |
-|Age returned for Planets | Birthday: 10-29-1994| Mars Age: 36.94|
-| ------------- | ------------- | ------------- |
-|Age returned for Planets | Birthday: 10-29-1994| Jupiter Age: 1.93|
-| ------------- | ------------- | ------------- |
-
 ## Technologies Used
-✦☾✦✦✦✦✦✦✦✦✦✦
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
 * _Atom_
 * _JavaScript_
@@ -57,5 +57,5 @@ You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 * _Gulp_
 
 ### License
-✦✦✦✦✦✦✦✦✦✦✦✦
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 Copyright &copy; 2017 _Kira Loo_
