@@ -10,5 +10,30 @@
   </head>
   <body>
     <h1>Test</h1>
+    <hr noshade>
+    <br>
+    <form id="illnessSearch">
+      <div class="form-group">
+        <label for="illnessSearch">What symptom are you currently expiriencing?:</label>
+        <br>
+        <input type="text" name="illnessSearch" placeholder="Write your symptom here" required>
+      </div>
+      <button type="submit" class="btn btn-success">FIND DOCTOR</button>
+    </form>
+    <hr noshade>
+    <br>
+
+    <form id="doctorSearch">
+      <div class="form-group">
+        <label for="doctorSearch">Find a Doctor in Portland by name:</label>
+        <br>
+        <input type="text" name="doctorSearch" placeholder="Write a doctor's name here" required>
+      </div>
+      <button type="submit" class="btn btn-success">FIND PDX DOCTOR</button>
+    </form>
+    <div class="container">
+      <h2>Doctors in your area:</h2>
+      <div id="result1"></div>
+    </div>
   </body>
 </html>
