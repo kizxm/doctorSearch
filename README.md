@@ -6,7 +6,7 @@
 #### Doctor Search, September 15, 2017
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
-#### By Kira Loo
+#### By `Kira Loo`
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
 ## Description
@@ -22,10 +22,7 @@ You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 * ->▲ Clone the repo from git hub.
 * ->▲ Open in your favorite editor
 * ->▲ !!! VERY IMPORTANT !!! MAKE SURE YOU READ BELOW !!!
-* ->▲ Run with -> npm build
-*               -> gulp build
-*               -> gulp bower
-*
+* ->▲ Run with -> npm build  -> gulp build  -> gulp bower
 * ->▲ open up index.html in your preferred browser & have at it dude!
 
 ![Alt text](img/ptownwebbie.png)
@@ -44,11 +41,12 @@ You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 
 ## Notes **
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
-`When building the files for this project from the ground up on Windows, -> make sure to install babelify before running jsBrowserify.
+
+When building the files for this project from the ground up on Windows, -> make sure to install babelify before running jsBrowserify.
 
 As well, sometimes things don't run right on windows in gitbash - have node.js command prompt handy, and make sure both are run in adminstrator mode.
 --> bower init doesn't work in gitbash properly, load in node.js.
---> karma init doesn't work in gitbash properly, load in node.js.`
+--> karma init doesn't work in gitbash properly, load in node.js.
 
 ## Technologies Used
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
