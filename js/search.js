@@ -8,15 +8,14 @@ apiData: function(doctor, showDoctor) {
   doctor.data.forEach(function(doctor) {
     doctor1.push(
       {
-       image: doctor1.profile.image_url,
-       firstName: doctor1.profile.first_name,
-       lastName: doctor1.profile.last_name,
-       street: doctor1.practices[0].visit_address.street,
-       city: doctor1.practices[0].visit_address.city,
-       state: doctor1.practices[0].visit_address.state,
-       zip: doctor1.practices[0].visit_address.zip,
-       phone: doctor1.practices[0].phones[0].number,
-       newPatient: doctor1.practices[0].accepts_new_patients
+       firstName: doctor.profile.first_name,
+       lastName: doctor.profile.last_name,
+       street: doctor.practices[0].visit_address.street,
+       city: doctor.practices[0].visit_address.city,
+       state: doctor.practices[0].visit_address.state,
+       zip: doctor.practices[0].visit_address.zip,
+       phone: doctor.practices[0].phones[0].number,
+       newPatient: doctor.practices[0].accepts_new_patients
       }
     );
   });
@@ -35,8 +34,8 @@ docByIllness: function(sickness, showDoctor) {
 });
 },
 
-docByName: function(name, showDoctor) {
-  let getDoctorApi2 = fetch(`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=or-portland&limit=10&user_key=${apiKey}`)
+docByName: function(physician, showDoctor) {
+  let getDoctorApi2 = fetch(`https://api.betterdoctor.com/2016-03-01/doctors?name=${physician}&location=or-portland&limit=10&user_key=${apiKey}`)
   .then((res) => {
     res.json().then((doctor) => {
       console.log(doctor);

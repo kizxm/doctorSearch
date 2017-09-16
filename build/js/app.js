@@ -16,15 +16,14 @@ var doctorLogic = exports.doctorLogic = {
     var doctor1 = [];
     doctor.data.forEach(function (doctor) {
       doctor1.push({
-        image: doctor1.profile.image_url,
-        firstName: doctor1.profile.first_name,
-        lastName: doctor1.profile.last_name,
-        street: doctor1.practices[0].visit_address.street,
-        city: doctor1.practices[0].visit_address.city,
-        state: doctor1.practices[0].visit_address.state,
-        zip: doctor1.practices[0].visit_address.zip,
-        phone: doctor1.practices[0].phones[0].number,
-        newPatient: doctor1.practices[0].accepts_new_patients
+        firstName: doctor.profile.first_name,
+        lastName: doctor.profile.last_name,
+        street: doctor.practices[0].visit_address.street,
+        city: doctor.practices[0].visit_address.city,
+        state: doctor.practices[0].visit_address.state,
+        zip: doctor.practices[0].visit_address.zip,
+        phone: doctor.practices[0].phones[0].number,
+        newPatient: doctor.practices[0].accepts_new_patients
       });
     });
     showDoctor(doctor1);
@@ -40,11 +39,11 @@ var doctorLogic = exports.doctorLogic = {
     });
   },
 
-  docByName: function docByName(name, showDoctor) {
-    var getDoctorApi2 = fetch('https://api.betterdoctor.com/2016-03-01/doctors?name=' + name + '&location=or-portland&limit=10&user_key=' + apiKey).then(function (res) {
+  docByName: function docByName(physician, showDoctor) {
+    var getDoctorApi2 = fetch('https://api.betterdoctor.com/2016-03-01/doctors?name=' + physician + '&location=or-portland&limit=10&user_key=' + apiKey).then(function (res) {
       res.json().then(function (doctor) {
         console.log(doctor);
-        doctor.apiData(doctor, showDoctor);
+        doctorLogic.apiData(doctor, showDoctor);
       });
     }).catch(function (error) {
       console.log(error);
@@ -62,22 +61,20 @@ $(document).ready(function () {
   // ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ //
 
   function doctorSpread(doctor1) {
-    doctor1.forEach(function (test) {
-      $('#result1').append('<img src=' + doctor1.image_url + ' height="50" width="50"> ');
-      $('#result1').append('<br><b>Phone Number:</b> ' + doctor1.phone);
-      $('#result1').append('<hr noshade>');
-      $('#result1').append('<br>' + doctor1.firstName + ' ' + doctor1.lastName);
-      $('#result1').append('<br>' + doctor1.street + ' ');
-      $('#result1').append('<br>' + doctor1.city + ' ' + doctor1.state + ' ' + doctor1.zip);
-      $('#result1').append('<b><br>Open for new Patients:</b> ' + doctor1.acceptingPatients);
+    doctor1.forEach(function (doctor) {
+      $('#result1').append('<b>Phone Number:</b> ' + doctor.phone);
+      $('#result1').append('<br>' + doctor.firstName + ' ' + doctor.lastName);
+      $('#result1').append('<br>' + doctor.street + ' ');
+      $('#result1').append('<br>' + doctor.city + ' ' + doctor.state + ' ' + doctor.zip);
+      $('#result1').append('<b><br>Open for new Patients:</b> ' + doctor.newPatient);
     });
   }
 
   $('#illnessSearch').submit(function (e) {
     e.preventDefault();
-    var illness = $("input[name = 'illnessSearch']").val();
+    var sickness = $("input[name = 'illnessSearch']").val();
     $("input").val("");
-    _search.doctorLogic.docByIllness(illness, doctorSpread);
+    _search.doctorLogic.docByIllness(sickness, doctorSpread);
   });
 
   $('#doctorSearch').submit(function (e) {
