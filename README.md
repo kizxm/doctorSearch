@@ -36,17 +36,20 @@ You will need npm, Jasmine, Karma, Gulp and Bower installed on your device.
 | ------------- | ------------- | ------------- |
 |Enter in Name of Physician| "Harold" | All Doctors named "Harold" or with similar parameters are returned.|
 | ------------- | ------------- | ------------- |
-|User search has no returns | "helloworld"| Nothing is returned|
+|User search has no returns | "helloworld"| "Hmmm, nothing appears for this query, please try again!"|
 | ------------- | ------------- | ------------- |
+| User Doesn't input anything | "" | "Entry required" |
 
 ## Notes **
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
 
 When building the files for this project from the ground up on Windows, -> make sure to install babelify before running jsBrowserify.
 
-As well, sometimes things don't run right on windows in gitbash - have node.js command prompt handy, and make sure both are run in adminstrator mode.
---> bower init doesn't work in gitbash properly, load in node.js.
---> karma init doesn't work in gitbash properly, load in node.js.
+As well, sometimes things don't run right on windows in gitbash - have node.js command prompt handy, and make sure both are run in administrator mode.
+
+ bower init doesn't work in gitbash properly, load in node.js.
+
+ karma init doesn't work in gitbash properly, load in node.js.
 
 ## Technologies Used
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲

@@ -23,6 +23,7 @@ var doctorLogic = exports.doctorLogic = {
         state: doctor.practices[0].visit_address.state,
         zip: doctor.practices[0].visit_address.zip,
         phone: doctor.practices[0].phones[0].number,
+        website: doctor.practices[0].website,
         newPatient: doctor.practices[0].accepts_new_patients
       });
     });
@@ -61,13 +62,18 @@ $(document).ready(function () {
   // ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ //
 
   function doctorSpread(doctor1) {
-    doctor1.forEach(function (doctor) {
-      $('#result1').append('<br><b>Phone Number:</b> ' + doctor.phone);
-      $('#result1').append('<br>' + doctor.firstName + ' ' + doctor.lastName);
-      $('#result1').append('<br>' + doctor.street + ' ');
-      $('#result1').append('<br>' + doctor.city + ' ' + doctor.state + ' ' + doctor.zip);
-      $('#result1').append('<b><br>Open for new Patients:</b> ' + doctor.newPatient + '<br><hr noshade>');
-    });
+    if (doctor1.length == 0) {
+      $('#result1').append("Hmmm, nothing appears for this query, please try again!");
+    } else {
+      doctor1.forEach(function (doctor) {
+        $('#result1').append('<br><b>Phone Number:</b> ' + doctor.phone);
+        $('#result1').append('<br>' + doctor.firstName + ' ' + doctor.lastName);
+        $('#result1').append('<br>' + doctor.street + ' ');
+        $('#result1').append('<br>' + doctor.city + ' ' + doctor.state + ' ' + doctor.zip);
+        $('#result1').append('<br><b>Website: </b>' + doctor.website);
+        $('#result1').append('<b><br>Open for new Patients:</b> ' + doctor.newPatient + '<br><hr noshade>');
+      });
+    }
   }
 
   $('#illnessSearch').submit(function (e) {

@@ -15,6 +15,7 @@ apiData: function(doctor, showDoctor) {
        state: doctor.practices[0].visit_address.state,
        zip: doctor.practices[0].visit_address.zip,
        phone: doctor.practices[0].phones[0].number,
+       website: doctor.practices[0].website,
        newPatient: doctor.practices[0].accepts_new_patients
       }
     );
